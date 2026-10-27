@@ -1,86 +1,91 @@
-/* CRT solarpunk psicodélico · nellsdev landing · rev.2 (S4) */
+/* HUD fósforo verde sobre negro · rev.3 (S4)
+   refs: Force of Will (ventanas/HUD), collage Win95 (barras ✕, botones),
+   póster techno (// LABEL_, brackets, dot-grid) */
 :root{
-  --bg:#06030c; --panel:#0e0a1a; --panel2:#12081f;
-  --ink:#f0e9ff; --dim:#a89ac4;
-  --pink:#ff4da6; --purple:#a55bff; --green:#7ee08a; --amber:#f4d03f;
-  --line:#2b1a4d;
+  --bg:#000; --ink:#f4f7f4; --dim:#9fb4a6;
+  --green:#3ddc78; --green-dim:rgba(61,220,120,.32); --green-glow:rgba(61,220,120,.5);
+  --panel:#040806; --line:var(--green-dim);
 }
 *{box-sizing:border-box}
 html{color-scheme:dark}
 body{
-  margin:0 auto; padding:1.5rem 1.25rem 3rem; max-width:720px; position:relative;
-  background:var(--bg); color:var(--ink);
-  font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  margin:0; color:var(--ink); background:var(--bg);
+  font:15px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  letter-spacing:.02em;
 }
-/* ondas psicodélicas de fondo */
-body::before{
-  content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
-  background:
-    repeating-radial-gradient(circle at 15% 110%, rgba(165,91,255,.14) 0 42px, transparent 42px 84px),
-    repeating-radial-gradient(circle at 85% -10%, rgba(255,77,166,.11) 0 48px, transparent 48px 96px),
-    repeating-linear-gradient(115deg, rgba(126,224,138,.05) 0 26px, transparent 26px 52px);
+/* dot-grid psicodélico (matriz de puntos verde) */
+.hud{
+  max-width:740px; margin:0 auto; padding:1.5rem 1.25rem 3rem; position:relative;
+  background-image:
+    radial-gradient(var(--green-dim) 1px, transparent 1.6px),
+    radial-gradient(rgba(61,220,120,.12) 1px, transparent 1.6px);
+  background-size:26px 26px, 26px 26px;
+  background-position:0 0, 13px 13px;
 }
-/* scanlines CRT */
-body::after{
-  content:""; position:fixed; inset:0; z-index:10; pointer-events:none;
-  background:repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px);
-  mix-blend-mode:overlay;
+/* scanlines CRT sobre todo */
+.scan{
+  position:fixed; inset:0; z-index:50; pointer-events:none;
+  background:repeating-linear-gradient(0deg, rgba(61,220,120,.035) 0 1px, transparent 1px 3px);
 }
 @media (prefers-reduced-motion: no-preference){
-  body::before{animation:drift 60s linear infinite}
-  @keyframes drift{to{background-position:0 84px, 0 -96px, 52px 0}}
+  .scan{animation:crt 8s linear infinite}
+  @keyframes crt{to{background-position:0 300px}}
 }
-h1,h2,h3{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;line-height:1.25;margin:0}
-header{padding:2.5rem 0 1.5rem;border-bottom:2px solid var(--purple)}
-h1{font-size:1.6rem;text-shadow:2px 2px 0 rgba(255,77,166,.55)}
-h1 .nick{color:var(--green);font-weight:400;text-shadow:2px 2px 0 rgba(126,224,138,.25)}
-.tagline{margin:.6rem 0 1rem;color:var(--dim)}
-/* botones retro de los sombreros */
+/* ventanas Win95 con barra de título */
+.win{
+  position:relative; background:var(--panel); border:2px solid var(--green-dim);
+  padding:2.2rem 1.1rem 1.1rem; margin:0 0 1.1rem;
+  box-shadow:6px 6px 0 rgba(61,220,120,.14);
+}
+.win::before{
+  content:attr(data-win);
+  position:absolute; top:-2px; left:-2px; right:-2px;
+  background:var(--green); color:#02140a;
+  font-size:.68rem; font-weight:700; letter-spacing:.14em;
+  padding:.18rem .6rem;
+}
+header.win{margin-top:2.5rem}
+h1{font-size:1.35rem;margin:0;text-transform:uppercase;text-shadow:0 0 10px var(--green-glow)}
+h1 .nick{color:var(--green);font-weight:400}
+.tagline{margin:.6rem 0 .4rem;color:var(--dim);font-size:.82rem}
+.hearts{margin:0 0 .9rem;color:var(--green);letter-spacing:.5em;font-size:.95rem;text-shadow:0 0 8px var(--green-glow)}
+/* stickers-botón [ CORCHETES ] */
 .hats{display:flex;flex-wrap:wrap;gap:.6rem}
 .hats span{
-  border:2px solid var(--pink); color:var(--pink); background:var(--panel);
-  padding:.2rem .8rem; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
-  font-family:ui-monospace,Menlo,Consolas,monospace;
-  box-shadow:3px 3px 0 var(--purple);
+  border:1px solid var(--green); color:var(--green); background:#010603;
+  padding:.2rem .65rem; font-size:.72rem; letter-spacing:.08em;
+  box-shadow:2px 2px 0 rgba(61,220,120,.25);
 }
-.hats span:nth-child(2){border-color:var(--green);color:var(--green)}
-.hats span:nth-child(3){border-color:var(--amber);color:var(--amber)}
-main{padding-top:.5rem;position:relative;z-index:1}
-h2{color:var(--pink);font-size:1.05rem;margin:2rem 0 1rem}
-h2::before{content:"▓▒░ ";color:var(--purple)}
-/* tarjetas-ventana CRT */
-.card{
-  background:var(--panel); border:2px solid var(--line);
-  box-shadow:5px 5px 0 rgba(165,91,255,.45);
-  border-radius:10px; padding:1rem 1.1rem; margin:0 0 1.1rem; position:relative;
+main{margin-top:.5rem}
+.sec{
+  color:var(--green); font-size:.95rem; margin:2rem 0 .9rem;
+  border-bottom:1px dashed var(--green-dim); padding-bottom:.3rem;
+  text-shadow:0 0 8px var(--green-glow);
 }
-.card::before{
-  content:""; position:absolute; top:-2px; left:-2px; right:-2px; height:14px;
-  background:linear-gradient(90deg, var(--pink), var(--purple));
-  border-radius:8px 8px 0 0; opacity:.85;
+h3{font-size:.92rem;margin:0;text-transform:uppercase;letter-spacing:.06em}
+.card p{margin:.6rem 0 0;font-size:.86rem}
+.card .stack{color:var(--dim);font-size:.74rem}
+.card .stack span,.rows span{color:var(--green)}
+.card.muted{opacity:.75}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{
+  background:var(--panel); border:1px solid rgba(61,220,120,.2);
+  padding:.6rem .8rem; margin:0 0 .55rem; font-size:.84rem;
 }
-.card h3{font-size:1rem;padding-top:.5rem}
-.card p{margin:.55rem 0 0;font-size:.92rem}
-.card .stack{color:var(--dim);font-size:.8rem;font-family:ui-monospace,Menlo,Consolas,monospace}
-.card.muted{opacity:.8}
-.card:nth-child(odd){transform:rotate(-.35deg)}
-.card:nth-child(even){transform:rotate(.3deg)}
-ul{margin:0;padding-left:1.2rem;color:var(--dim)}
-li{margin:.4rem 0}
-a{color:var(--amber);text-decoration:none}
-a:hover,a:focus-visible{text-decoration:underline}
-:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:2px}
-/* botones de contacto con efecto pulsado */
-footer{margin-top:2.5rem;padding-top:1.25rem;border-top:2px solid var(--purple)}
-.alien{margin:0 0 .9rem;font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--green);font-size:.85rem}
+.rows li span{display:inline-block;min-width:6.2em}
+a{color:var(--green);text-decoration:underline dotted rgba(61,220,120,.6)}
+a:hover,a:focus-visible{background:var(--green);color:#02140a;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+footer.win{margin-top:2rem}
+.alien{margin:0 0 .9rem;color:var(--dim);font-size:.74rem;letter-spacing:.06em}
 .contacto{display:flex;flex-wrap:wrap;gap:.7rem}
 .contacto a{
-  font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem;color:var(--ink);
-  background:var(--panel2); border:2px solid var(--green); border-radius:6px;
-  padding:.3rem .9rem; text-decoration:none; box-shadow:3px 3px 0 var(--pink);
+  font-size:.76rem; color:var(--ink); background:#0a130e; text-decoration:none;
+  border:2px solid var(--green-dim); padding:.32rem .85rem;
+  box-shadow:3px 3px 0 rgba(61,220,120,.35);
   transition:transform .08s ease, box-shadow .08s ease;
 }
-.contacto a:hover,.contacto a:focus-visible{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--pink);text-decoration:none}
+.contacto a:hover,.contacto a:focus-visible{background:var(--green);color:#02140a;transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(61,220,120,.35)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }

@@ -77,3 +77,4 @@
 - L3 (2026-10-27): T1 implementada inline (writer rechazó delegación por unidad trivial). Verificación S6: total 5.5KB, CSS 2KB, 0 scripts/imágenes externas, enlaces solo a perfiles públicos.
 
 - L4 (owner, 2026-10-27, referencia visual adjunta): "me agrada, tengo duda me gustaria que el diseño fuera entre ondas psicodelicas, botones estilo retro" + capturas: neocities 3PROUTSPACE (verde ácido, stickers, grid) y arte "Force of will" de @del.septemtrion (rosa hot CRT, scanlines, ventanas pixel). Fusión decidida por el padre: S4 rev.2.
+- L5 (owner, 2026-10-27): "para los colores me gustaría una combinación de fondo negro, detalles verdes, letras blancas" + 3 referencias en references/ (Force of Will, collage ventanas Win95, póster techno HUD). S4 rev.3 = HUD fosforescente verde sobre negro, ventanas con barra de título y ✕, filas // LABEL_, brackets ⊥⌐, corazones pixel, dither/dot-grid, texto blanco.
