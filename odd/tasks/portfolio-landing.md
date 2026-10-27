@@ -36,10 +36,13 @@
      do not mention details beyond "MSc thesis on perceptual hashing for encrypted voice").
   4. Footer/contact: LinkedIn https://www.linkedin.com/in/nellsdev/, GitHub nellsdev,
      IG @nells_it01, mail nrodriguezo2301@gmail.com (all already public).
-- **S4 — Design language.** "solarpunk terminal": dark base (#0d1311-ish), green accent
-  (#7ee08a-ish), one clay-alien motif as a subtle emoji/SVG, monospace for headers
-  (ui-monospace stack), generous whitespace, mobile-first single column, max-width ~720px.
-  Respect `prefers-reduced-motion`; no animations that distract; visible focus styles.
+- **S4 — Design language** (rev. 2, 2026-10-27). "CRT solarpunk psicodélico": black-violet
+  base, hot-pink + purple + acid-green accents, subtle psychedelic waves via repeating
+  radial/linear CSS gradients, scanline overlay, chunky retro buttons with hard offset
+  shadows and press effect on hover, sticker-ish card tilt (subtle). Monospace headers,
+  mobile-first single column, max-width ~720px. Animations only under
+  `prefers-reduced-motion: no-preference` and very slow; visible focus styles; text
+  contrast AA over wave background (dark panels behind text).
 - **S5 — Meta/SEO.** `<title>Nells — De Señales a Datos</title>`, description meta with
   the 3 hats, `lang="es"`, Open Graph tags using only text (no external images).
 - **S6 — Acceptance.** `index.html` references only relative/https GitHub links; opens
@@ -72,3 +75,5 @@
 - L2: ServidorFamiliar repo stays PRIVATE until credentials rotated + history sanitized;
   landing must not link to it yet.
 - L3 (2026-10-27): T1 implementada inline (writer rechazó delegación por unidad trivial). Verificación S6: total 5.5KB, CSS 2KB, 0 scripts/imágenes externas, enlaces solo a perfiles públicos.
+
+- L4 (owner, 2026-10-27, referencia visual adjunta): "me agrada, tengo duda me gustaria que el diseño fuera entre ondas psicodelicas, botones estilo retro" + capturas: neocities 3PROUTSPACE (verde ácido, stickers, grid) y arte "Force of will" de @del.septemtrion (rosa hot CRT, scanlines, ventanas pixel). Fusión decidida por el padre: S4 rev.2.
