@@ -20,10 +20,11 @@ python3 -m http.server 8080
 ## Structure
 
 - `index.html` — all copy (Spanish, `lang="es"`)
-- `styles.css` — solarpunk-terminal theme, mobile-first
+- `styles.css` — "Psychedelic punk neon" (group 0), terminal × zine direction
 - `odd/tasks/portfolio-landing.md` — feature spec and log
 
 ## Placeholders
 
-- `#` link on La Agenda Verde card → replace with collective IG when available.
+- Portrait is a provisional inline neon SVG with caption "tu foto va acá" — replace
+  with a real `<img>` when the owner uploads the photo.
 - ServidorFamiliar intentionally unlinked (private until sanitized).

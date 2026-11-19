@@ -36,13 +36,27 @@
      do not mention details beyond "MSc thesis on perceptual hashing for encrypted voice").
   4. Footer/contact: LinkedIn https://www.linkedin.com/in/nellsdev/, GitHub nellsdev,
      IG @nells_it01, mail nrodriguezo2301@gmail.com (all already public).
-- **S4 — Design language** (rev. 2, 2026-10-27). "CRT solarpunk psicodélico": black-violet
-  base, hot-pink + purple + acid-green accents, subtle psychedelic waves via repeating
-  radial/linear CSS gradients, scanline overlay, chunky retro buttons with hard offset
-  shadows and press effect on hover, sticker-ish card tilt (subtle). Monospace headers,
-  mobile-first single column, max-width ~720px. Animations only under
-  `prefers-reduced-motion: no-preference` and very slow; visible focus styles; text
-  contrast AA over wave background (dark panels behind text).
+- **S4 — Design language** (rev. 4, 2026-11-04; reemplaza a rev. 3). Grupo 0 "Psychedelic
+  punk neon" del design system del workspace (`~/design/system.md`), dirección
+  terminal × zine según el artboard elegido por la owner:
+  `~/design/personal-neon-hub/04-terminal-x-zine.html` (spec visual, no copia verbatim).
+  Tokens: void `#05060A`, panel `#0A0C13`, ink `#F5F5F5`, dim `#8B8FA3`; un categoría =
+  un hue: TECH cyan `#22D3EE`, DATOS magenta `#FF3E9A`, PROYECTS amarillo `#FFD23F`;
+  glitch violet `#B14EFF` solo como chrome/acento; verde legacy `#3DDC78` solo en la
+  banda espectral y stamps. Arcoiris como chrome, nunca texto corrido. Componentes:
+  ventanas `.win[data-win]` con title-bar por categoría; hero-grid con retrato SVG
+  provisorio (caption "tu foto va acá") hasta que la owner suba la foto real; ticker
+  "SEÑAL AL AIRE" crawl-marquee 24 s con pausa hover/focus, juego duplicado
+  aria-hidden, y la tag como hipervínculo único (Instagram) sin botón VER_CANAL;
+  botones bracket con sombra offset; corazones con tintineo en el último; fondo dots +
+  rain streaks + grain + scanlines + ovni que cruza 1 vez por ciclo de 28 s. Toda
+  animación bajo `prefers-reduced-motion: no-preference` (reduce además oculta ovni y
+  clones del crawl). Mapeo de componentes heredados: `.win/data-win` → ventanas por
+  categoría; `.hats`/`.contacto` → bracket buttons; `.hearts` → fila con twinkle en el
+  último corazón, relleno (♥, no ♡). Ticker = contenido de redes sociales que la owner
+  va a publicar (nunca repositorios); sin publicaciones reales aún, los ítems marcan
+  ejes temáticos reales con "pronto". Descripciones de proyecto cortas y concisas
+  (≈30+ caracteres, estilo artboard; el copy largo queda solo en S3 como fuente).
 - **S5 — Meta/SEO.** `<title>Nells — De Señales a Datos</title>`, description meta with
   the 3 hats, `lang="es"`, Open Graph tags using only text (no external images).
 - **S6 — Acceptance.** `index.html` references only relative/https GitHub links; opens
@@ -78,3 +92,5 @@
 
 - L4 (owner, 2026-10-27, referencia visual adjunta): "me agrada, tengo duda me gustaria que el diseño fuera entre ondas psicodelicas, botones estilo retro" + capturas: neocities 3PROUTSPACE (verde ácido, stickers, grid) y arte "Force of will" de @del.septemtrion (rosa hot CRT, scanlines, ventanas pixel). Fusión decidida por el padre: S4 rev.2.
 - L5 (owner, 2026-10-27): "para los colores me gustaría una combinación de fondo negro, detalles verdes, letras blancas" + 3 referencias en references/ (Force of Will, collage ventanas Win95, póster techno HUD). S4 rev.3 = HUD fosforescente verde sobre negro, ventanas con barra de título y ✕, filas // LABEL_, brackets ⊥⌐, corazones pixel, dither/dot-grid, texto blanco.
+- L6 (handoff sesión hub `01a18550…`, 2026-11-04): redirigir el landing al grupo 0 "Psychedelic punk neon" con la dirección del artboard `personal-neon-hub/04-terminal-x-zine.html` (elegido por la owner). Espec: mapear componentes existentes, contenido real sin inventar (proyectos/enlaces ya presentes en index.html), ticker solo con links existentes, retrato SVG provisorio, checks pedidos (loopback, 3 secciones, pausa hover, audit hex grupo 0, reduced-motion, links). Prohibido commitear/pushear — decisión explícita de la owner primero. Implementado inline; S4 reescrito a rev.4.
+- L7 (owner, 2026-11-04, correcciones al resultado): "el ultimo corazon que tintinea, no tiene relleno solo es el borde quiero que igual sea relleno, los tickers de señal al aire es para contenido que estare publicando en mis redes sociales no para los repositorios, la descripcion de los proyectos debe ser corta y concisa asi minimo 30 caracteres como en el diseño." Aplicado: ♥ twinkle relleno; ticker reescrito con ejes de contenido de redes (marcados "pronto", sin inventar publicaciones); descripciones de los 4 proyectos condensadas a ~30-46 caracteres.

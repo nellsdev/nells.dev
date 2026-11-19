@@ -11,62 +11,119 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="hud">
-<div class="scan"></div>
-
-<header class="win" data-win="NELLS.SYS">
-  <h1>NELLY ITZEL RODRÍGUEZ ORTIZ <span class="nick">· nellsdev</span></h1>
-  <p class="tagline">DE SEÑALES A DATOS 🌿 · INGENIERÍA EN COMPUTACIÓN · MSC MICROELECTRÓNICA</p>
-  <p class="hearts" aria-hidden="true">♥ ♥ ♥ ♥ ♡</p>
-  <nav class="hats" aria-label="Lo que hago">
-    <span>[ CIENTÍFICA DE DATOS ]</span>
-    <span>[ SYSTEM BUILDER ]</span>
-    <span>[ TALLERISTA SOLARPUNK ]</span>
-  </nav>
-</header>
-
+<div class="dots" aria-hidden="true"></div>
+<div class="stars" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="scan" aria-hidden="true"></div>
+<svg class="ufo" viewBox="0 0 64 32" aria-hidden="true"><g stroke="#22D3EE" stroke-width="2" fill="none" stroke-linecap="round"><path d="M20 15a12 10 0 0 1 24 0" fill="rgba(34,211,238,.22)"/><ellipse cx="32" cy="21" rx="27" ry="7" fill="#0A0C13"/><circle cx="17" cy="21" r="1.8" fill="#FF3E9A" stroke="none"/><circle cx="32" cy="23.4" r="1.8" fill="#FFD23F" stroke="none"/><circle cx="47" cy="21" r="1.8" fill="#FF3E9A" stroke="none"/><path d="M28 28c1.5 2 6.5 2 8 0" stroke="#22D3EE" opacity=".5"/></g></svg>
 <main>
-  <h2 class="sec">// PROYECTOS_</h2>
+  <div class="band" aria-hidden="true"></div>
 
-  <article class="win card" data-win="PROJECT_01 ✕">
-    <h3><a href="https://github.com/nellsdev/desigualdad_verde_cdmx">DESIGUALDAD VERDE CDMX</a></h3>
-    <p>¿Existe una correlación medible entre la falta de áreas verdes, temperaturas
-    extremas, marginación socioeconómica y enfermedades respiratorias en la CDMX?</p>
-    <p class="stack"><span>//</span> PYTHON · GOOGLE EARTH ENGINE · JUPYTER</p>
-  </article>
+  <header class="win w-te" data-win="NELLS.SYS // MISIÓN: PRESENTARME">
+    <div class="hero-grid">
+      <div>
+        <p class="sig">// del ruido hago orden</p>
+        <h1>NELLY <span class="cut b">ITZEL</span> RODRÍGUEZ ORTIZ<span class="nick">· nellsdev</span></h1>
+        <p class="tagline">DE SEÑALES A DATOS 🌿 · INGENIERÍA EN COMPUTACIÓN · MSC MICROELECTRÓNICA</p>
+        <nav class="hats" aria-label="Lo que hago">
+          <span>[ CIENTÍFICA DE DATOS ]</span>
+          <span>[ SYSTEM BUILDER ]</span>
+          <span>[ TALLERISTA SOLARPUNK ]</span>
+        </nav>
+        <p class="hearts" aria-hidden="true">♥ ♥ ♥ ♥ <span class="twinkle">♥</span></p>
+      </div>
+      <figure class="portrait">
+        <div class="frame">
+          <svg viewBox="0 0 196 196" role="img" aria-label="Retrato provisorio en línea neón: audífonos y mech magenta">
+            <rect width="196" height="196" fill="#05060A"/>
+            <g stroke="#22D3EE" stroke-width="3" fill="none" stroke-linecap="round">
+              <path d="M98 34c-26 0-44 20-44 46 0 10 3 19 8 26-18 8-32 20-38 38h148c-6-18-20-30-38-38 5-7 8-16 8-26 0-26-18-46-44-46z"/>
+              <circle cx="56" cy="82" r="14"/>
+              <path d="M56 62c16-18 56-18 72 0"/>
+              <circle cx="56" cy="82" r="4" fill="#22D3EE"/>
+              <circle cx="82" cy="80" r="2.6" fill="#F5F5F5"/>
+              <path d="M114 76c3 2 7 2 10 0"/>
+              <path d="M88 100c6 4 14 4 20 0"/>
+              <path d="M92 112h24" opacity=".35"/>
+            </g>
+            <path d="M118 36c10 6 18 16 20 28 1 6 1 12 0 18 4-4 7-10 7-18 0-16-10-28-27-28z" fill="#FF3E9A" opacity=".85"/>
+            <circle cx="152" cy="40" r="3" fill="#FFD23F"/>
+            <path d="M158 122l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#FFD23F" opacity=".9"/>
+            <text x="10" y="188" font-family="monospace" font-size="9" letter-spacing="2" fill="#8B8FA3">REC ● CAM 01</text>
+          </svg>
+        </div>
+        <figcaption>tu foto va acá · reemplazo &lt;img&gt; cuando subas la real</figcaption>
+      </figure>
+    </div>
+  </header>
 
-  <article class="win card" data-win="PROJECT_02 ✕">
-    <h3><a href="https://github.com/nellsdev/SocialMedia-Manager-OllamaAI">SOCIALMEDIA-MANAGER · OLLAMA AI</a></h3>
-    <p>MVP de SaaS para creadores y colectivos: onboarding conversacional con IA,
-    research de nicho persistido e integraciones Instagram/WhatsApp.</p>
-    <p class="stack"><span>//</span> FASTAPI · SUPABASE · OLLAMA · NEXT.JS</p>
-  </article>
+  <div class="ticker" role="region" aria-label="Señal al aire — contenido que vengo a publicar en redes">
+    <a class="tag" href="https://www.instagram.com/nells_it/" aria-label="SEÑAL AL AIRE — abrir Instagram @nells_it"><span class="on" aria-hidden="true"></span>Señal al aire</a>
+    <div class="crawl">
+      <ol aria-label="Contenido pronto en redes @nells_it">
+        <li class="i-da"><b>Clima y datos</b><small>series desde el satélite · pronto</small></li>
+        <li class="i-te"><b>System building</b><small>el server casero en video · pronto</small></li>
+        <li class="i-pr"><b>Talleres solarpunk</b><small>electrónica con e-waste · pronto</small></li>
+        <li class="i-pr"><b>La Agenda Verde</b><small>bitácora del colectivo · pronto</small></li>
+        <li class="i-da clon" aria-hidden="true"><b>Clima y datos</b><small>series desde el satélite · pronto</small></li>
+        <li class="i-te clon" aria-hidden="true"><b>System building</b><small>el server casero en video · pronto</small></li>
+        <li class="i-pr clon" aria-hidden="true"><b>Talleres solarpunk</b><small>electrónica con e-waste · pronto</small></li>
+        <li class="i-pr clon" aria-hidden="true"><b>La Agenda Verde</b><small>bitácora del colectivo · pronto</small></li>
+      </ol>
+    </div>
+  </div>
 
-  <article class="win card" data-win="PROYECTO_03 ✕">
-    <h3>LA AGENDA VERDE</h3>
-    <p>Colectivo del norte: recuperación de un espacio verde abandonado en el límite
-    GAM–Neza–Ecatepec como punto de aprendizaje y recreación de proximidad, con
-    talleres de electrónica solarpunk construidos con basura tecnológica.</p>
-    <p class="stack"><span>//</span> <a href="https://linktr.ee/laagenda.verde">@laagenda.verde</a></p>
-  </article>
+  <div class="cols">
+    <section class="win w-te" data-win="TECH //">
+      <span class="stamp">corriente alta</span>
+      <h2>Tech</h2>
+      <ul>
+        <li>
+          <b>ServidorFamiliar</b>
+          <small>Debian + Nextcloud + Borg en hardware recuperado</small>
+          <small class="stack"><span class="muted">Privado — a pedido.</span> DEBIAN · NEXTCLOUD · BORG · NFTABLES</small>
+        </li>
+      </ul>
+    </section>
 
-  <article class="win card muted" data-win="PROYECTO_04 ✕">
-    <h3>SERVIDORFAMILIAR</h3>
-    <p>Servidor casero Debian en hardware recuperado: Nextcloud + BorgBackup cifrado,
-    encendido menos de 4 h al día. <em>Privado — a pedido.</em></p>
-    <p class="stack"><span>//</span> DEBIAN · NEXTCLOUD · BORG · NFTABLES</p>
-  </article>
-</main>
+    <section class="win w-da" data-win="DATOS //">
+      <span class="stamp">desde el cielo</span>
+      <h2>Datos</h2>
+      <ul>
+        <li>
+          <b><a href="https://github.com/nellsdev/desigualdad_verde_cdmx">Desigualdad Verde CDMX</a></b>
+          <small>Calor, áreas verdes y marginación en la CDMX</small>
+          <small class="stack">PYTHON · GOOGLE EARTH ENGINE · JUPYTER</small>
+        </li>
+      </ul>
+    </section>
 
-<footer class="win" data-win="CONECTAR.EXE">
-  <p class="alien">⚠ ERROR 404: PERMISO PARA NO INTENTARLO NO ENCONTRADO</p>
-  <nav class="contacto" aria-label="Contacto">
-    <a href="https://www.linkedin.com/in/nellsdev/">[ LINKEDIN ]</a>
-    <a href="https://github.com/nellsdev">[ GITHUB ]</a>
-    <a href="https://www.instagram.com/nells_it/">[ INSTAGRAM ]</a>
-    <a href="mailto:nrodriguezo2301@gmail.com">[ MAIL ]</a>
+    <section class="win w-pr" data-win="PROYECTS //">
+      <span class="stamp">en construcción</span>
+      <h2>Proyects</h2>
+      <ul>
+        <li>
+          <b><a href="https://github.com/nellsdev/SocialMedia-Manager-OllamaAI">SocialMedia-Manager · Ollama AI</a></b>
+          <small>SaaS con IA para creadores y colectivos</small>
+          <small class="stack">FASTAPI · SUPABASE · OLLAMA · NEXT.JS</small>
+        </li>
+        <li>
+          <b><a href="https://linktr.ee/laagenda.verde">La Agenda Verde</a></b>
+          <small>Recuperación de un espacio verde en el norte</small>
+          <small class="stack">@LAAGENDA.VERDE</small>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="alert"><b>ERROR 404 //</b> PERMISO PARA NO INTENTARLO NO ENCONTRADO</p>
+
+  <nav class="contactos" aria-label="Contacto">
+    <a class="c-te" href="https://github.com/nellsdev">[ GITHUB ]</a>
+    <a class="c-te" href="https://www.linkedin.com/in/nellsdev/">[ LINKEDIN ]</a>
+    <a class="c-da" href="https://www.instagram.com/nells_it/">[ INSTAGRAM ]</a>
+    <a class="c-pr" href="mailto:nrodriguezo2301@gmail.com">[ MAIL ]</a>
   </nav>
-</footer>
-</div>
+</main>
 </body>
 </html>
