@@ -21,7 +21,7 @@ python3 -m http.server 8080
 
 - `index.html` — all copy (Spanish, `lang="es"`)
 - `styles.css` — "Psychedelic punk neon" (group 0), terminal × zine direction
-- `odd/tasks/portfolio-landing.md` — feature spec and log
+- `odd/tasks/portfolio-landing.md` — feature spec and log (**local only**: untracked and gitignored so Pages never serves it)
 
 ## Placeholders
 
